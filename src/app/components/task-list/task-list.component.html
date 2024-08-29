@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Lista de Tareas</h2>
+  <button class="btn btn-primary my-3" (click)="openModal()">Agregar nueva tarea</button>
+
+  <div class="task-list">
+      <div *ngFor="let task of tasks" class="task-item card mb-3" [ngClass]="{'completed': task.completed, 'discarded': task.discarded}">
+          <app-task-item
+              [task]="task"
+              (onEdit)="openModal(task)"
+              (onComplete)="completeTask(task.id)"
+              (onDiscard)="discardTask(task.id)">
+          </app-task-item>
+      </div>
+  </div>
+
+  <app-task-modal 
+      *ngIf="isModalOpen" 
+      [isEditing]="isEditing" 
+      [taskId]="selectedTaskId" 
+      (onClose)="closeModal()"
+      (onSubmit)="handleTaskSubmit($event)">
+  </app-task-modal>
+</div>
