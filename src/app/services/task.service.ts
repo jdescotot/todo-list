@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Task } from '../models/task.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable, Subject } from 'rxjs';
+import { map, filter, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -9,8 +12,9 @@ export class TaskService {
   private completedTasks: Task[] = [];
   private discardedTasks: Task[] = [];
   private currentId = 1;
+  private tasksSubject = new Subject<any>();
 
-  constructor() {}
+   constructor() {}
 
   getTasks(): Task[] {
     return this.allTasks;

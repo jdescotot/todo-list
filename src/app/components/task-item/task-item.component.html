@@ -2,10 +2,10 @@
   <h5>{{ task.title }}</h5>
   <p>{{ task.description }}</p>
   <p class="text-muted">
-      Creado el: {{ task.createdAt | date:'short' }}
-      <span *ngIf="task.completedAt"> | Completado el: {{ task.completedAt | date:'short' }}</span>
-      <span *ngIf="task.discardedAt"> | Descartado el: {{ task.discardedAt | date:'short' }}</span>
+    Creado el: {{ task.createdAt | date:'short' }}
+    <span *ngIf="task.completedAt"> | Completado el: {{ task.completedAt | date:'short' }}</span>
+    <span *ngIf="task.discardedAt"> | Descartado el: {{ task.discardedAt | date:'short' }}</span>
   </p>
-  <button class="btn btn-success" (click)="completeTask()">Completado</button>
-  <button class="btn btn-danger" (click)="discardTask()">Borrar</button>
+  <button *ngIf="viewMode === 'all'" class="btn btn-success" (click)="completeTask()">Completado</button>
+  <button *ngIf="viewMode === 'all'" class="btn btn-danger" (click)="discardTask()">Borrar</button>
 </div>

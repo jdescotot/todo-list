@@ -7,13 +7,17 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskModalComponent } from './components/task-modal/task-modal.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CompletedTasksComponent } from './components/completed-tasks/completed-tasks.component';
+import { DiscardedTasksComponent } from './components/discarded-tasks/discarded-tasks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     TaskModalComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    CompletedTasksComponent,
+    DiscardedTasksComponent
   ],
   imports: [
     BrowserModule,

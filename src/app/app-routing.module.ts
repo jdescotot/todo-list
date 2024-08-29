@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/tasks', pathMatch: 'full' },
   { path: 'tasks', component: TaskListComponent },
   { path: 'completed', component: CompletedTasksComponent },
-  { path: 'discarded', component: DiscardedTasksComponent }
+  { path: 'discarded', component: DiscardedTasksComponent },
+  { path: '**', redirectTo: '/tasks' }
 ];
 
 @NgModule({

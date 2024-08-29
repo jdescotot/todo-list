@@ -2,7 +2,7 @@
     <h2>Tareas Completadas</h2>
     <div class="task-list">
       <div *ngFor="let task of completedTasks" class="task-item card mb-3">
-        <app-task-item [task]="task"></app-task-item>
+        <app-task-item [task]="task" viewMode="completed"></app-task-item>
       </div>
     </div>
   </div>

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Importamos CommonModule
-import { FormsModule } from '@angular/forms';  // Importamos FormsModule
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../models/task.model';
-import { TaskModalComponent } from '../task-modal/task-modal.component'; // Importamos TaskModalComponent
-import { TaskItemComponent } from '../task-item/task-item.component'; // Importamos TaskItemComponent
+import { TaskModalComponent } from '../task-modal/task-modal.component';
+import { TaskItemComponent } from '../task-item/task-item.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, TaskModalComponent, TaskItemComponent],  // Declaramos los módulos y componentes importados
+  imports: [CommonModule, FormsModule, TaskModalComponent, TaskItemComponent],
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
