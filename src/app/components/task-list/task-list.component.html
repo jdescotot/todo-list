@@ -1,6 +1,8 @@
 <div class="container">
   <h2>Lista de Tareas</h2>
-  <button class="btn btn-primary my-3" (click)="openModal()">Agregar nueva tarea</button>
+  <div class="text-center">
+    <button class="btn btn-primary my-3" (click)="openModal()">Agregar nueva tarea</button>
+  </div>
 
   <div class="task-list">
     <ng-container *ngFor="let task of tasks">
